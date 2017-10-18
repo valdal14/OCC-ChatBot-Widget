@@ -1,0 +1,11 @@
+{
+  "name": "chatbotwidget",
+  "version": 1,
+  "global": false,
+  "javascript": "widget-chatbotwidget-js",
+  "pageTypes": ["home"],
+  "imports": ["product"],
+  "jsEditable": true,
+  "config": {
+  }
+}

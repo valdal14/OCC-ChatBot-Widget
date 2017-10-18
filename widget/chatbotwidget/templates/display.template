@@ -1,0 +1,43 @@
+<!-- ko if: user().loggedIn -->
+<!-- Button trigger modal -->
+<button type="button" id="modalbutton" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
+  <<< Ask for help
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h4 class="modal-title" id="myModalLabel">Casa del Libro ChatBot</h4> -->
+        <img src="./file/general/logo-casa-1.png" alt="Casa del Libro">
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Conversation</label>
+          <div class="textContainer">
+
+            <p class='customerInput'>
+            </p>
+
+            <p class='botText'>
+            </p>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="customerText">Message</label>
+          <input type="text" class="form-control" id="customerText" value="" placeholder="Write your message...">
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" id="sendMessage" data-bind="onRender: clickSendMessageEvent">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /ko -->
