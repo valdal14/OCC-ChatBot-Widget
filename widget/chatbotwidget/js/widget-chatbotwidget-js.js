@@ -15,7 +15,7 @@ define(
             $("#sendMessage").click(function(e) {
                 e.preventDefault();
 
-                socket = io.connect('https://planetaapp-gse00010894.apaas.em3.oraclecloud.com');
+                socket = io.connect('https://GrupoPlanetaSocketServer-gse00011350.apaas.us6.oraclecloud.com');
                 socket.emit('clientData', $('#customerText').val());
                 $('.customerInput').append($('#customerText').val() + "<br><br>");
                 $('#customerText').val("");
@@ -26,7 +26,8 @@ define(
                         for (var i = 0; i < data.choices.length; i++) {
                             $('.botText').append('<a href="#" class="' + data.choices[i] + '">' + data.choices[i] + "</a>" + "<br><br>");
 
-                            $(`.${data.choices[i]}`).click(function() {
+                            $(`.${data.choices[i]}`).click(function(e) {
+                                e.preventDefault();
                                 className = $(this).text();
                                 clickCallback();
                             });

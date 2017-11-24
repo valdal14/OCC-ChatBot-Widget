@@ -5,7 +5,7 @@
   "javascript": "widget-chatbotwidget-js",
   "pageTypes": ["home"],
   "imports": ["product"],
-  "jsEditable": true,
+  "jsEditable": false,
   "config": {
   }
 }
